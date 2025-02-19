@@ -1,2 +1,27 @@
 只是尝试一下在GitHub上写东西
 浪费了你几秒钟😅
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Day N --learn Arduino_Servo    Feb.19th
+
+
+#include <Servo.h>    // create Servo object to control a servo
+
+Servo myservo；
+
+const servoPin = 2 ；     // attaches the servo on pin 2 to the Servo object
+
+void setup(){
+  myservo.attach(servoPin);
+}
+
+int angle = 0； // variable to store the servo position
+int delayTime = 100；
+void loop(){
+  for(angle=0; angle <= 180; angle += 45){
+    myservo.write(angle);    // tell servo to go to position in variable 'angle'
+    delay(delayTime);
+  }
+}
